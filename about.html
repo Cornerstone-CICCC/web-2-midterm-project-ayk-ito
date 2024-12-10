@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-size: cover;
+        background-position: top;
+
+        background-repeat: no-repeat;
+      }
+      body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+      }
+
+      .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        z-index: 1;
+        h1 {
+          font-size: 4rem;
+        }
+        p {
+          font-size: 2rem;
+        }
+      }
+      @media (max-width: 768px) {
+        body {
+          background-position: center 15rem;
+        }
+        .container {
+          top: 60%;
+
+          h1 {
+            font-size: 3rem;
+          }
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script src="app.js"></script>
+    <script src="./about.js"></script>
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <title>About</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <a class="navbar-brand" href="#" id="home-link">Buzz World</a>
+
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" id="movie-trend-link">Buzz Movies</a>
+          <a class="navbar-brand" href="#" id="show-trend-link">Buzz Shows</a>
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Day
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="#" id="day-option">Day</a></li>
+              <li><a class="dropdown-item" href="#" id="week-option">Week</a></li>
+            </ul>
+          </div>
+        </div>
+        <form class="d-flex" role="search" id="search-form">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+            id="search-input"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </nav>
+    </header>
+    <div class="container">
+      <h1>Welcome to Buzz World!</h1>
+      <p>Check out the trending movies and TV shows around the world.</p>
+      <p>You can also search by genre or keyword.</p>
+      <p>Start discovering now!</p>
+    </div>
+  </body>
+</html>
